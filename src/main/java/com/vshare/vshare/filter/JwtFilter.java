@@ -1,5 +1,7 @@
-package com.vshare.vshare.feature.user.control;
+package com.vshare.vshare.filter;
 
+import com.vshare.vshare.feature.user.control.JwtService;
+import com.vshare.vshare.feature.user.control.UserDetailService;
 import com.vshare.vshare.feature.user.repo.UserRepo;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -71,6 +73,7 @@ public class JwtFilter extends OncePerRequestFilter {
         List<String> endpoints = new ArrayList<>();
         endpoints.add("/users/login");
         endpoints.add("/users/register");
+        endpoints.add("/users/test");
 
         String url = request.getRequestURI();
 

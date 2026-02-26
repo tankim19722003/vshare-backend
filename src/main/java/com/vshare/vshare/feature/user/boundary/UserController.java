@@ -34,6 +34,7 @@ public class UserController {
     }
 
     @GetMapping("/test")
+    @PermitAll
     public String test() {
         return "Hello world";
     }
